@@ -3,12 +3,13 @@
   <requires>
     <import addon="xbmc.python" version="2.20.0"/>
   </requires>
-  <extension point="kodi.context.item" library="addon.py">
+  <extension point="kodi.context.item" library="context.py">
     <item>
       <label>30005</label>
       <visible>true</visible>
     </item>
   </extension>
+  <extension point="kodi.python.library" library="skin_support.py" />
   <extension point="kodi.addon.metadata">
     <platform>all</platform>
     <summary lang="en">Starts randomly playing from the selected item.</summary>
