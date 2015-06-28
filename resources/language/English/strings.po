@@ -1,0 +1,10 @@
+# Kodi Media Center language file
+# Addon Name: ExtendedInfo Script - Open dialog
+# Addon id: context.playrandom
+msgid ""
+msgstr ""
+
+msgctxt "#30005"
+msgid "Play Random"
+msgstr ""
+
