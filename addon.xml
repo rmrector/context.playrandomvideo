@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="context.playrandom" name="Play random context menu item" version="0.0.1" provider-name="rector">
+<addon id="context.playrandom" name="Play Random Items menu item" version="0.0.1" provider-name="rmrector">
   <requires>
-    <import addon="xbmc.python" version="2.20.0"/>
+    <import addon="xbmc.python" version="2.20.0" />
+    <import addon="script.playrandom" version="0.0.1" />
   </requires>
   <extension point="kodi.context.item" library="context.py">
     <item>
@@ -9,10 +10,9 @@
       <visible>true</visible>
     </item>
   </extension>
-  <extension point="kodi.python.library" library="skin_support.py" />
   <extension point="kodi.addon.metadata">
     <platform>all</platform>
     <summary lang="en">Starts randomly playing from the selected item.</summary>
-    <description lang="en">Starts randomly playing from the selected item. Works on TV Shows, should work on Seasons/Movie Sets/Genres/Music, would be nice to work with playlists. Search from the left hand side seems unlikely.</description>
+    <description lang="en">Starts randomly playing from the selected item.</description>
   </extension>
 </addon>
