@@ -1,12 +1,6 @@
-import json
-import os
-import urllib
 import xbmc
 import xbmcaddon
-import xbmcgui
 import xbmcvfs
-
-import xml.etree.ElementTree as ET
 
 __addon__ = xbmcaddon.Addon()
 __addonid__ = __addon__.getAddonInfo('id')
@@ -16,7 +10,7 @@ try:
     # logger = visuallogger.Logger()
     xbmcaddon.Addon('script.design.helper')
     loggerInstalled = True
-except ExplicitException:
+except:
     # logger = None
     loggerInstalled = False
 
@@ -34,9 +28,9 @@ def log(message, logToGui=True, level=xbmc.LOGDEBUG):
 
 
 def main():
-    folderPath = urllib.unquote(xbmc.getInfoLabel("ListItem.FolderPath").decode("utf-8"))
+    fullUrl = xbmc.getInfoLabel("ListItem.FolderPath").decode("utf-8")
     # randomPlayer.playRandomFromFolderPath(folderPath)
-    builtin = 'RunScript(script.playrandom, "%s")' % folderPath
+    builtin = 'RunScript(script.playrandom, "%s")' % fullUrl
     xbmc.executebuiltin(builtin)
 
 
