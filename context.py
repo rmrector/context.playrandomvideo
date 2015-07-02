@@ -18,13 +18,13 @@ except:
 def log(message, logToGui=True, level=xbmc.LOGDEBUG):
     if loggerInstalled:
         # Yeah, this is ugly, so def want it to be a module
-        builtin = "RunScript(script.design.helper, log, %s, \"%s\"" % (__addonid__, message)
+        builtin = 'RunScript(script.design.helper, log, %s, "%s"' % (__addonid__, message)
         if logToGui:
             builtin += ', logToGui'
         builtin += ')'
-        xbmc.executebuiltin(builtin)
+        xbmc.executebuiltin(builtin.encode('utf-8'))
     else:
-        xbmc.log('[%s] %s' % (__addonid__, message), level)
+        xbmc.log('[%s] %s' % (__addonid__, message.encode('utf-8')), level)
 
 
 def main():
