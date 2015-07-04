@@ -15,12 +15,12 @@ except:
     loggerInstalled = False
 
 
-def log(message, logToGui=True, level=xbmc.LOGDEBUG):
+def log(message, log_to_gui=True, level=xbmc.LOGDEBUG):
     if loggerInstalled:
         # Yeah, this is ugly, so def want it to be a module
         builtin = 'RunScript(script.design.helper, log, %s, "%s"' % (__addonid__, message)
-        if logToGui:
-            builtin += ', logToGui'
+        if log_to_gui:
+            builtin += ', log_to_gui'
         builtin += ')'
         xbmc.executebuiltin(builtin.encode('utf-8'))
     else:
@@ -28,10 +28,9 @@ def log(message, logToGui=True, level=xbmc.LOGDEBUG):
 
 
 def main():
-    fullUrl = xbmc.getInfoLabel("ListItem.FolderPath").decode("utf-8")
-    # randomPlayer.playRandomFromFolderPath(folderPath)
-    builtin = 'RunScript(script.playrandom, "%s")' % fullUrl
-    xbmc.executebuiltin(builtin)
+    full_url = xbmc.getInfoLabel("ListItem.FolderPath").decode("utf-8")
+    builtin = 'RunScript(script.playrandom, "%s")' % full_url
+    xbmc.executebuiltin(builtin.encode('utf-8'))
 
 
 if __name__ == '__main__':
