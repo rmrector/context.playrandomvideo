@@ -3,6 +3,7 @@
   <requires>
     <import addon="xbmc.python" version="2.20.0" />
     <import addon="script.playrandom" version="0.0.1" />
+    <import addon="script.module.devhelper" version="0.0.1" />
   </requires>
   <extension point="kodi.context.item" library="context.py">
     <item>
