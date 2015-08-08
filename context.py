@@ -1,10 +1,8 @@
-from __future__ import unicode_literals
-
 from devhelper import pykodi
 from devhelper.pykodi import log
 
 def main():
-    path = pykodi.get_info_label('ListItem.FolderPath')
+    path = pykodi.get_infolabel('ListItem.FolderPath')
     if pykodi.get_conditional('Window.IsVisible(MyVideoNav.xml)'):
         media = 'video'
     elif pykodi.get_conditional('Window.IsVisible(MyMusicNav.xml)') or pykodi.get_conditional('Window.IsVisible(MyMusicSongs.xml)'):
