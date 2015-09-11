@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="context.playrandom" name="Play Random Items" version="0.0.1" provider-name="rmrector">
+<addon id="context.playrandomvideo" name="Play Random Video" version="0.5.0~dev" provider-name="rmrector">
   <requires>
     <import addon="xbmc.python" version="2.20.0" />
-    <import addon="script.playrandom" version="0.0.1" />
-    <import addon="script.module.devhelper" version="0.0.1" />
+    <import addon="script.playrandomvideos" version="0.5.0~dev" />
   </requires>
   <extension point="kodi.context.item" library="context.py">
     <item>
       <label>30005</label>
-      <visible>true</visible>
+      <visible>Window.IsVisible(videos) + ![Container.Content(movies) | Container.Content(episodes)]</visible>
     </item>
   </extension>
   <extension point="kodi.addon.metadata">
     <platform>all</platform>
-    <summary lang="en">Starts randomly playing from the selected item.</summary>
-    <description lang="en">Starts randomly playing from the selected item.</description>
+    <summary lang="en">Plays a random video from the selected item.</summary>
+    <description lang="en">Plays a random video from the selected item.</description>
+    <license>The MIT License</license>
   </extension>
 </addon>
