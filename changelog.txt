@@ -1,4 +1,4 @@
-v1.0.1~dev (??)
+v1.0.1 (2015-09-15)
 - Fix add-on metadata
 - Pass label to script properly (fixes TV Actors/Studios/Tags)
 v1.0.0 (2015-09-11)
