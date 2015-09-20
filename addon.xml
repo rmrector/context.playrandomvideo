@@ -2,11 +2,11 @@
 <addon id="context.playrandomvideo" name="Play Random Video" version="1.0.2~dev" provider-name="rmrector">
   <requires>
     <import addon="xbmc.python" version="2.20.0" />
-    <import addon="script.playrandomvideos" version="0.5.0" />
+    <import addon="script.playrandomvideos" version="0.6.0" />
   </requires>
   <extension point="kodi.context.item" library="context.py">
     <item>
-      <label>30005</label>
+      <label>$ADDON[script.playrandomvideos 32100]</label>
       <visible>Window.IsVisible(videos) + ![Container.Content(movies) | Container.Content(episodes)]</visible>
     </item>
   </extension>

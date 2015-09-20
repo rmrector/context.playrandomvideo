@@ -1,3 +1,5 @@
+v1.0.2 (2015-09-20)
+- Get label from script.playrandomvideos
 v1.0.1 (2015-09-15)
 - Fix add-on metadata
 - Pass label to script properly (fixes TV Actors/Studios/Tags)
