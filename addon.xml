@@ -7,7 +7,7 @@
   <extension point="kodi.context.item" library="context.py">
     <item>
       <label>$ADDON[script.playrandomvideos 32100]</label>
-      <visible>Window.IsVisible(videos) + ![Container.Content(movies) | Container.Content(episodes)]</visible>
+      <visible>Window.IsVisible(videos) + ![Container.Content(movies) | Container.Content(episodes)] + !SubString(ListItem.FolderPath, plugin, Left) + !SubString(ListItem.FolderPath, addons, Left) + !SubString(ListItem.FolderPath, sources, Left)</visible>
     </item>
   </extension>
   <extension point="kodi.addon.metadata">
