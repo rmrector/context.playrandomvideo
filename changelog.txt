@@ -1,3 +1,6 @@
+v1.0.6 (2016-11-07)
+- Disable separate context item, merged into script.playrandomvideos
+
 v1.0.5~beta1 (2016-09-06)
 - Escape path passed to script
 
